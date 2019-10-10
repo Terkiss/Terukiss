@@ -52,7 +52,7 @@ namespace ConsoleApp1.Data_Structor
             }
             else
             {
-
+                // 아무데이터도 없을때 현재 데이터  노드를 루트노드 로 설정
                 JeongBinaryTreeNode<T> TempData = new JeongBinaryTreeNode<T>();
                 TempData.Data = Data;
                 Root = TempData;
@@ -68,9 +68,68 @@ namespace ConsoleApp1.Data_Structor
 
 
 
+
+        /// <summary>
+        /// 전위 순회 함수
+        /// 전위 순회는 뿌리 ->왼쪽 -> 오른쪽 순서로 방문
+        /// </summary>
         public void PreorderPrintTree()
         {
+            JeongBinaryTreeNode<T> current = Root;
+            JeongStack<JeongBinaryTreeNode<T>> BtreeStaks = new JeongStack<JeongBinaryTreeNode<T>>();
+            JeongLinkedList<T> printList = new JeongLinkedList<T>();
+            BtreeStaks.PuSH(Root);
+            //BtreeStaks.PuSH(Root);
+            Console.WriteLine(BtreeStaks.IsEmpTy());
+            int index = 0;
+            while (true)
+            {
+                if (index == count)
+                {
+                    break;
+                }
+                index++;
+                printList.Add(current.Data);
 
+
+                if (current.Left != null)
+                {
+                    current = current.Left;
+                    if (current.Left == null && current.Right == null)
+                    {
+                        continue;
+                    }
+                    BtreeStaks.PuSH(current);
+                }
+                else if (current.Right != null)
+                {
+                    current = current.Right;
+                    
+                    BtreeStaks.PuSH(current);
+                }
+                else
+                {
+                    var dummyData = BtreeStaks.PoP();
+                    if (dummyData.Right != null)
+                    {
+                        current = dummyData.Right;
+                    }
+                    //current = dummyData;
+                }
+            }
+            string TextData = "";
+            for (int i = 0; i < printList._Count; i++)
+            {
+                if (i % 5 == 0)
+                {
+                    //Console.WriteLine("\n");
+                    TextData += "\n";
+                }
+
+                TextData += printList[i] + " -> ";
+                //Console.WriteLine(printList[i] + " -> ");
+            }
+            Console.WriteLine("결과 \n" + TextData);
         }
 
         public void InorderPrintTree()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 
 // 사용자 네임 스페이스
@@ -162,13 +163,23 @@ namespace ConsoleApp1
                     Console.WriteLine("랜덤 삽입");
 
                     Random random = new Random();
-                    
+
                     for (int i = 0; i < 100; i++)
                     {
                         var data = random.Next(0, 1000);
                         jtree.AddNode(data);
                     }
 
+                }
+                else if (Select.Equals("tview") == true)
+                {
+                    Console.WriteLine("화면 출력");
+
+
+                }
+                else if (Select.Equals("ttval") == true)
+                {
+                    jtree.PreorderPrintTree();
                 }
             }
 

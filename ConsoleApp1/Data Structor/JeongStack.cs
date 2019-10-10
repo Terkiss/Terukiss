@@ -58,6 +58,10 @@ namespace ConsoleApp1.Data_Structor
             count++;
         }
 
+        /// <summary>
+        /// 스텍이 비었을경우 트루반환
+        /// </summary>
+        /// <returns></returns>
         public bool IsEmpTy()
         {
             if (count == 0)
