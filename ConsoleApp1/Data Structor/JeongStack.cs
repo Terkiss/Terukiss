@@ -17,7 +17,21 @@ namespace ConsoleApp1.Data_Structor
                 return count;
             }
         }
+        public T Pop
+        {
+            get
+            {
+                return PoP();
+            }
+        }
 
+        public T Push
+        {
+            set
+            {
+                PuSH(value);
+            }
+        }
         public T PoP()
         {
             try

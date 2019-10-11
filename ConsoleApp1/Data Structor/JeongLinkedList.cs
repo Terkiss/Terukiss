@@ -106,8 +106,6 @@ namespace ConsoleApp1.Data_Structor
                 while (current.Next != null)
                 {
                     current = current.Next;
-                    System.Console.WriteLine(count);
-
                 }
                 current.Next = node;
                 node.Next = null;
@@ -122,8 +120,7 @@ namespace ConsoleApp1.Data_Structor
             while (curr != null)
             {
                 if (curr.Data.Equals(value) == true)
-                {
-                    System.Console.WriteLine("찻앗음" + i + " " + curr.Data);
+                {             
                     return i;
                 }
 
@@ -138,7 +135,7 @@ namespace ConsoleApp1.Data_Structor
             {
                 if (list[i].Equals(value) == true)
                 {
-                    System.Console.WriteLine("찻앗음" + i + " " + list[i]);
+                    //System.Console.WriteLine("찻앗음" + i + " " + list[i]);
                     return i;
                 }
             }
@@ -201,7 +198,7 @@ namespace ConsoleApp1.Data_Structor
 
 
 
-            Console.WriteLine("ddddd + " + stk.EmpTy());
+            //Console.WriteLine("ddddd + " + stk.EmpTy());
             stk.Push(RightStart);
             stk.Push(LeftStart);
 
@@ -215,11 +212,11 @@ namespace ConsoleApp1.Data_Structor
                     pivot = Jlist[RightStart];
                     Low = LeftStart;
                     High = RightStart;
-                    Console.WriteLine("분할여부 :: " + (RightStart - LeftStart) + "  불값" + (RightStart - LeftStart > 1));
+                   // Console.WriteLine("분할여부 :: " + (RightStart - LeftStart) + "  불값" + (RightStart - LeftStart > 1));
 
                     while (true)
                     {
-                        Console.WriteLine("L :: " + Low + "H :: " + High + "pivot :: " + pivot);
+                        //Console.WriteLine("L :: " + Low + "H :: " + High + "pivot :: " + pivot);
                       
                         while (Comparerser(pivot, Jlist[Low]))
                         {

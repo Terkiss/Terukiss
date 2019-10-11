@@ -13,13 +13,13 @@ namespace ConsoleApp1.Data_Structor
 
 
 
-        
+
         public void AddNode(T Data)
         {
             JeongStack<JeongBinaryTreeNode<T>> JJStack = new JeongStack<JeongBinaryTreeNode<T>>();
 
             JeongBinaryTreeNode<T> ParrentNode = null;
-  
+
             try
             {
                 SearchBinaryTree(ref ParrentNode, Data);
@@ -82,55 +82,60 @@ namespace ConsoleApp1.Data_Structor
             //BtreeStaks.PuSH(Root);
             Console.WriteLine(BtreeStaks.IsEmpTy());
             int index = 0;
-            while (true)
+            while (!BtreeStaks.IsEmpTy())
             {
-                if (index == count)
-                {
-                    break;
-                }
-                index++;
-                printList.Add(current.Data);
+
+                //printList.Add(current.Data); // 방문 처리
 
 
-                if (current.Left != null)
+                //if (current.Left != null)
+                //{
+                //    current = current.Left;
+                //    if (current.Left == null && current.Right == null)
+                //    {
+                //        continue;
+                //    }
+                //    BtreeStaks.PuSH(current);
+                //}
+                //else if (current.Right != null)
+                //{
+                //    current = current.Right;
+
+                //    BtreeStaks.PuSH(current);
+                //}
+                //else
+                //{
+                //    var dummyData = BtreeStaks.PoP();
+                //    if (dummyData.Right != null)
+                //    {
+                //        current = dummyData.Right;
+                //    }
+                //    //current = dummyData;
+                //}
+
+
+                var PopData = BtreeStaks.Pop;
+                printList.Add(PopData.Data); // 방문 처리
+
+                //스택은 FIFO 
+                // 오른쪽 먼저 삽입 -> 왼쪽 삽입 
+                if (PopData.Right != null)
                 {
-                    current = current.Left;
-                    if (current.Left == null && current.Right == null)
-                    {
-                        continue;
-                    }
-                    BtreeStaks.PuSH(current);
+                    BtreeStaks.Push = PopData.Right;
                 }
-                else if (current.Right != null)
+
+                if (PopData.Left != null)
                 {
-                    current = current.Right;
-                    
-                    BtreeStaks.PuSH(current);
-                }
-                else
-                {
-                    var dummyData = BtreeStaks.PoP();
-                    if (dummyData.Right != null)
-                    {
-                        current = dummyData.Right;
-                    }
-                    //current = dummyData;
+                    BtreeStaks.Push = PopData.Left;
                 }
             }
-            string TextData = "";
-            for (int i = 0; i < printList._Count; i++)
-            {
-                if (i % 5 == 0)
-                {
-                    //Console.WriteLine("\n");
-                    TextData += "\n";
-                }
-
-                TextData += printList[i] + " -> ";
-                //Console.WriteLine(printList[i] + " -> ");
-            }
-            Console.WriteLine("결과 \n" + TextData);
+            ConsolPrint(ref printList);
+         
         }
+
+
+
+
 
         public void InorderPrintTree()
         {
@@ -142,7 +147,35 @@ namespace ConsoleApp1.Data_Structor
 
         }
 
+        public void treetraval()
+        {
 
+        }
+            
+        
+        public void ConsolPrint(ref JeongLinkedList<T> printList)
+        {
+            string TextData = "";
+            for (int i = 0; i < printList._Count; i++)
+            {
+                if (i % 5 == 0)
+                {
+                    //Console.WriteLine("\n");
+                    TextData += "\n";
+                }
+                if (i == printList._Count - 1)
+                {
+                    TextData += printList[i];
+                }
+                else
+                {
+                    TextData += printList[i] + " -> ";
+                }
+
+
+            }
+            Console.WriteLine("결과 \n" + TextData);
+        }
         /// <summary>
         /// 이진 탐색 트리의 탐색 함수
         /// 좌측 값 vs 우측 값

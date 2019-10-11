@@ -164,9 +164,9 @@ namespace ConsoleApp1
 
                     Random random = new Random();
 
-                    for (int i = 0; i < 100; i++)
+                    for (int i = 0; i < 10000; i++)
                     {
-                        var data = random.Next(0, 1000);
+                        var data = random.Next(0, 1000000);
                         jtree.AddNode(data);
                     }
 
