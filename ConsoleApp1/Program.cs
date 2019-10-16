@@ -164,9 +164,9 @@ namespace ConsoleApp1
 
                     Random random = new Random();
 
-                    for (int i = 0; i < 10000; i++)
+                    for (int i = 0; i < 10; i++)
                     {
-                        var data = random.Next(0, 1000000);
+                        var data = random.Next(0, 100);
                         jtree.AddNode(data);
                     }
 
@@ -174,7 +174,7 @@ namespace ConsoleApp1
                 else if (Select.Equals("tview") == true)
                 {
                     Console.WriteLine("화면 출력");
-
+                    jtree.InorderPrintTree();
 
                 }
                 else if (Select.Equals("ttval") == true)

@@ -84,36 +84,6 @@ namespace ConsoleApp1.Data_Structor
             int index = 0;
             while (!BtreeStaks.IsEmpTy())
             {
-
-                //printList.Add(current.Data); // 방문 처리
-
-
-                //if (current.Left != null)
-                //{
-                //    current = current.Left;
-                //    if (current.Left == null && current.Right == null)
-                //    {
-                //        continue;
-                //    }
-                //    BtreeStaks.PuSH(current);
-                //}
-                //else if (current.Right != null)
-                //{
-                //    current = current.Right;
-
-                //    BtreeStaks.PuSH(current);
-                //}
-                //else
-                //{
-                //    var dummyData = BtreeStaks.PoP();
-                //    if (dummyData.Right != null)
-                //    {
-                //        current = dummyData.Right;
-                //    }
-                //    //current = dummyData;
-                //}
-
-
                 var PopData = BtreeStaks.Pop;
                 printList.Add(PopData.Data); // 방문 처리
 
@@ -136,15 +106,82 @@ namespace ConsoleApp1.Data_Structor
 
 
 
-
+        /// <summary>
+        /// 중위 순회 
+        /// </summary>
         public void InorderPrintTree()
         {
+            JeongBinaryTreeNode<T> current = null;
+            JeongStack<JeongBinaryTreeNode<T>> BtreeStaks = new JeongStack<JeongBinaryTreeNode<T>>();
+            JeongLinkedList<T> printList = new JeongLinkedList<T>();
+            
+            BtreeStaks.PuSH(current);
+            current = Root;
+            //BtreeStaks.PuSH(Root);
+            Console.WriteLine(BtreeStaks.IsEmpTy());
+            
 
+            while (!BtreeStaks.IsEmpTy())
+            {
+                // 매 반복시 왼쪾 트리 검색 만약 왼쪽 트리 원소가 있다면 스택에 저장
+                while (current != null)
+                {
+                    BtreeStaks.Push = current;
+
+                    current = current.Left;
+                }
+                current = BtreeStaks.Pop;
+
+                if (current == null)
+                {
+                    Console.WriteLine("현재 널 발생");
+                    break;
+                }
+               // break;
+                printList.Add(current.Data);
+
+                current = current.Right;
+                Console.WriteLine("현재 널 발생2");
+            }
+            ConsolPrint(ref printList);
         }
 
         public void postorderPrintTree()
         {
+            JeongBinaryTreeNode<T> current = null;
+            JeongStack<JeongBinaryTreeNode<T>> BtreeStaks = new JeongStack<JeongBinaryTreeNode<T>>();
+            JeongLinkedList<T> printList = new JeongLinkedList<T>();
 
+            BtreeStaks.PuSH(current);
+            current = Root;
+            //BtreeStaks.PuSH(Root);
+            Console.WriteLine(BtreeStaks.IsEmpTy());
+
+
+            while (!BtreeStaks.IsEmpTy())
+            {
+                // 매 반복시 왼쪾 트리 검색 만약 왼쪽 트리 원소가 있다면 스택에 저장
+                while (current != null)
+                {
+                    BtreeStaks.Push = current;
+
+                    current = current.Left;
+                }
+                current = BtreeStaks.Pop;
+
+                if (current == null)
+                {
+                    Console.WriteLine("현재 널 발생");
+                    break;
+                }
+                // break;
+                printList.Add(current.Data);
+
+                current = current.Right;
+                
+                Console.WriteLine("현재 널 발생2");
+            }
+            ConsolPrint(ref printList);
         }
 
         public void treetraval()
