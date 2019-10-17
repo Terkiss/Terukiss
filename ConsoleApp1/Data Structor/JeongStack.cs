@@ -90,6 +90,19 @@ namespace ConsoleApp1.Data_Structor
             }
         }
 
+        public void StackView()
+        {
+            JeongStackNode<T> current = JStack;
+            while (current !=null)
+            {
+                var data = current.Data;
+                Console.WriteLine(data + " ->");
+                current = current.Next;
+                
+            }
+        }
+
+
         /// 스택은 정렬할 필요가 없다 어떤 데이터 던지 입력 된 순서의 거꾸로의 순서로
         /// 입력 되기 떄문이다..
         /// 출력은 입력의  역순 

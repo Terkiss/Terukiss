@@ -146,40 +146,74 @@ namespace ConsoleApp1.Data_Structor
             ConsolPrint(ref printList);
         }
 
+
+
+        /// <summary>
+        /// ㅎ후위 순회
+        /// </summary>
         public void postorderPrintTree()
         {
             JeongBinaryTreeNode<T> current = null;
+            JeongBinaryTreeNode<T> doneNode = null;
             JeongStack<JeongBinaryTreeNode<T>> BtreeStaks = new JeongStack<JeongBinaryTreeNode<T>>();
             JeongLinkedList<T> printList = new JeongLinkedList<T>();
 
-            BtreeStaks.PuSH(current);
+            //BtreeStaks.PuSH(current);
             current = Root;
             //BtreeStaks.PuSH(Root);
             Console.WriteLine(BtreeStaks.IsEmpTy());
 
-
-            while (!BtreeStaks.IsEmpTy())
+            int i = 0;
+            while (true)
             {
-                // 매 반복시 왼쪾 트리 검색 만약 왼쪽 트리 원소가 있다면 스택에 저장
-                while (current != null)
+                if (current != null && current != doneNode)
                 {
+                    // 매 반복시 왼쪾 트리 검색 만약 왼쪽 트리 원소가 있다면 스택에 저장
                     BtreeStaks.Push = current;
+                    while (current != null)
+                    {
 
-                    current = current.Left;
+
+                        if (current.Right != null)
+                        {
+                            BtreeStaks.Push = current.Right;
+                        }
+                        if (current.Left != null)
+                        {
+                            BtreeStaks.Push = current.Left;
+                        }
+
+
+                        current = current.Left;
+                    }
                 }
-                current = BtreeStaks.Pop;
 
-                if (current == null)
+                //Console.WriteLine((i++) + " 회차 스택 뷰 \n");
+                //treeStaks.StackView();
+                if (!BtreeStaks.IsEmpTy())
                 {
-                    Console.WriteLine("현재 널 발생");
+                   
+
+                    current = BtreeStaks.Pop;  // 스택에서 노드 뽑기
+
+                    // 왼쪽 노드가 널이 아니고 오른쪽 노드가 널인경우
+                    if (current.Left != null && current.Right == null && current.Left != doneNode)
+                    {
+                        Console.WriteLine("current : " + current + " ->");
+                        BtreeStaks.Push = current;
+                        current = current.Left;
+                    }
+
+                    if (current.Right == null || current.Right == doneNode)
+                    {
+                        printList.Add(current.Data);
+                        doneNode = current;
+                    }
+                }
+                else
+                {
                     break;
                 }
-                // break;
-                printList.Add(current.Data);
-
-                current = current.Right;
-                
-                Console.WriteLine("현재 널 발생2");
             }
             ConsolPrint(ref printList);
         }

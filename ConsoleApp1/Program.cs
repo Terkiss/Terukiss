@@ -150,9 +150,18 @@ namespace ConsoleApp1
                 {
                     // 수동 입력
                     Console.WriteLine("삽입 선택\n 입력 할 값은 : ");
-                    string Value;
-                    Value = Console.ReadLine();
-                    jtree.AddNode(int.Parse(Value));
+                    //string Value;
+                    //Value = Console.ReadLine();
+                    //jtree.AddNode(int.Parse(Value));
+
+                    jtree.AddNode(6);
+                    jtree.AddNode(7);
+                    jtree.AddNode(3);
+                    jtree.AddNode(2);
+                    jtree.AddNode(4);
+                    jtree.AddNode(5);
+                    jtree.AddNode(0);
+                    jtree.AddNode(1);
 
                     Console.WriteLine("입력 완료 현재 카운트 값은 ? :: ");
 
@@ -180,6 +189,10 @@ namespace ConsoleApp1
                 else if (Select.Equals("ttval") == true)
                 {
                     jtree.PreorderPrintTree();
+                }
+                else if (Select.Equals("tp") == true)
+                {
+                    jtree.postorderPrintTree();
                 }
             }
 
