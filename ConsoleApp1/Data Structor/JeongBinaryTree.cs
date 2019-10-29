@@ -170,7 +170,7 @@ namespace ConsoleApp1.Data_Structor
                 if (current != null && current != doneNode)
                 {
                     // 매 반복시 왼쪾 트리 검색 만약 왼쪽 트리 원소가 있다면 스택에 저장
-                    stackPath += current.Data + " -> ";
+                    //stackPath += current.Data + " -> ";
                     BtreeStaks.Push = current;
                     while (current != null)
                     {
@@ -179,12 +179,12 @@ namespace ConsoleApp1.Data_Structor
                         if (current.Right != null)
                         {
                             BtreeStaks.Push = current.Right;
-                            stackPath += current.Right.Data + " -> ";
+                            //stackPath += current.Right.Data + " -> ";
                         }
                         if (current.Left != null)
                         {
                             BtreeStaks.Push = current.Left;
-                            stackPath += current.Left.Data + " -> ";
+                            //stackPath += current.Left.Data + " -> ";
                         }
 
 
@@ -205,9 +205,8 @@ namespace ConsoleApp1.Data_Structor
                     // 왼쪽 노드가 널이 아니고 오른쪽 노드가 널인경우
                     if (current.Left != null && current.Right == null && current.Left != doneNode)
                     {
-                        Console.WriteLine("current : " + current + " ->");
                         BtreeStaks.Push = current;
-                        stackPath += current.Data + "|| -> ";
+                      //  stackPath += current.Data + "|| -> ";
                         current = current.Left;
                     }
 
@@ -216,13 +215,13 @@ namespace ConsoleApp1.Data_Structor
                         printList.Add(current.Data);
                         doneNode = current;
                     }
-                    Console.WriteLine("done Node :: " + doneNode.Data);
+                   // Console.WriteLine("done Node :: " + doneNode.Data);
                 }
                 else
                 {
                     break;
                 }
-                Console.WriteLine(stackPath);
+                //Console.WriteLine(stackPath);
             }
             ConsolPrint(ref printList);
         }
