@@ -154,14 +154,14 @@ namespace ConsoleApp1
                     //Value = Console.ReadLine();
                     //jtree.AddNode(int.Parse(Value));
 
-                    jtree.AddNode(6);
-                    jtree.AddNode(7);
-                    jtree.AddNode(3);
-                    jtree.AddNode(2);
-                    jtree.AddNode(4);
+                    jtree.AddNode(8);
+                    jtree.AddNode(9);
                     jtree.AddNode(5);
-                    jtree.AddNode(0);
+                    jtree.AddNode(6);
+                    jtree.AddNode(4);
+                    jtree.AddNode(2);
                     jtree.AddNode(1);
+                    jtree.AddNode(7);
 
                     Console.WriteLine("입력 완료 현재 카운트 값은 ? :: ");
 
@@ -193,6 +193,10 @@ namespace ConsoleApp1
                 else if (Select.Equals("tp") == true)
                 {
                     jtree.postorderPrintTree();
+                }
+                else if (Select.Equals("trm") == true)
+                {
+                    jtree.RemoveNode(4);
                 }
             }
 

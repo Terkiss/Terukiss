@@ -61,6 +61,90 @@ namespace ConsoleApp1.Data_Structor
 
         }
 
+        public void RemoveNode(T Data)
+        {
+            JeongBinaryTreeNode<T> current = Root;
+            JeongBinaryTreeNode<T> ParrentNode = null;
+            JeongBinaryTreeNode<T> LeftChiled = null;
+            JeongBinaryTreeNode<T> RightChiled = null;
+            T catchData;
+            while (current != null)
+            {
+                if (ZeroComparerser(current.Data, Data) == true)
+                {
+                    LeftChiled = current.Left;
+                    RightChiled = current.Right;
+
+
+                    // 단말 노드일경우
+                    if (LeftChiled == null && RightChiled == null)
+                    {
+                        Console.WriteLine("1번쨰 케이스");
+                        if (ParrentNode.Left == current)
+                        {
+                            ParrentNode.Left = null;
+                        }
+                        else if (ParrentNode.Right == current)
+                        {
+                            ParrentNode.Right = null;
+                        }
+
+                        return;
+                    }
+                    else if (LeftChiled == null || RightChiled == null)
+                    {
+                        Console.WriteLine("2번쨰 케이스");
+                        if (LeftChiled != null)
+                        {
+                            Console.WriteLine("ㅇ   "+LeftChiled.Data);
+                            ParrentNode.Left = LeftChiled;
+                        }
+                        else if (RightChiled != null)
+                        {
+                            ParrentNode.Right = RightChiled;
+                        }
+                        return;
+                    }
+                    else
+                    {
+                        if (LeftChiled != null)
+                        {
+                            Console.WriteLine("3번째 케이스");
+                            var Left = LeftChiled;
+                            while (Left != null)
+                            {
+                                ParrentNode = Left;
+                                Left = Left.Right;
+                            }
+                            if (ParrentNode.Left != null)
+                            {
+                                current.Data = ParrentNode.Data;
+
+                                ParrentNode.Data = ParrentNode.Left.Data;
+                                ParrentNode.Left = null;
+                            }
+
+                        }
+                        return; 
+                    }
+                }
+
+
+                ParrentNode = current;
+
+                if (Comparerser(current.Data, Data) == true)
+                {
+                    current = current.Right;
+                }
+                else if (Comparerser(current.Data, Data) == false)
+                {
+                    current = current.Left;
+                }
+                
+            }
+
+
+        }
         public void TreeClean()
         {
             Root = null;
