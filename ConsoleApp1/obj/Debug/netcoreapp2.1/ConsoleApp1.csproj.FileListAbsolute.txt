@@ -27,3 +27,4 @@ D:\VS\ConsoleApp1\Terkiss\Terukiss\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleAp
 D:\VS\ConsoleApp1\Terkiss\Terukiss\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.AssemblyInfo.cs
 D:\VS\ConsoleApp1\Terkiss\Terukiss\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.dll
 D:\VS\ConsoleApp1\Terkiss\Terukiss\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.pdb
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.csprojAssemblyReference.cache
