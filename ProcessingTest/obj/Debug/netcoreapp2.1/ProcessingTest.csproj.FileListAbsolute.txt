@@ -1,0 +1,14 @@
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.csprojAssemblyReference.cache
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.csproj.CoreCompileInputs.cache
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.AssemblyInfoInputs.cache
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.AssemblyInfo.cs
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ProcessingTest.deps.json
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ProcessingTest.runtimeconfig.json
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ProcessingTest.runtimeconfig.dev.json
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ProcessingTest.dll
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ProcessingTest.pdb
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ConsoleApp1.dll
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ConsoleApp1.pdb
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.csproj.CopyComplete
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.dll
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.pdb

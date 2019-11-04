@@ -1,11 +1,6 @@
-﻿
-using System;
-using System.Collections.Generic;
-
-// 사용자 네임 스페이스
+﻿using System;
 using ConsoleApp1.Data_Structor;
-
-namespace ConsoleApp1
+namespace ProcessingTest
 {
     class Program
     {
@@ -23,7 +18,7 @@ namespace ConsoleApp1
 
             //_instance.StructureTest();
             _instance.TestFunc();
-
+            
 
         }
 
@@ -200,88 +195,88 @@ namespace ConsoleApp1
                 }
             }
 
-            }
         }
+    }
 
-        //private void StructureTest()
-        //{
-        //    var test = new jeongDataBuild<int>();
-        //    var list = test.GenList();
-        //    for (int i = 0; i < list._Count; i++)
-        //    {
-        //        Console.WriteLine(i + "삽입 전  원소 출력 2 {0}", list[i]);
-        //    }
-        //    list.Add(10);
-        //    list.Add(9);
-        //    list.Add(8);
-        //    list.Add(7);
-        //    list.Add(6);
-        //    list.Add(5);
-        //    list.Add(4);
-        //    //for (int i = 0; i < list._Count; i++)
-        //    //{
-        //    //    Console.WriteLine("원소 출력 {0}", list[i]);
-        //    //}
-         
-        //    //Console.WriteLine("저장 갯수 출력 {0}", list._Count);
-        //    ////list[0] = 1;
-        //    ////list[1] = 3;
-        //    ////list[2] = 5;
-        //    //for (int i = 0; i < list._Count; i++)
-        //    //{
-        //    //    Console.WriteLine("삽입 테스트 원소 출력 2 {0}", list[i]);
-        //    //}
-            
+    //private void StructureTest()
+    //{
+    //    var test = new jeongDataBuild<int>();
+    //    var list = test.GenList();
+    //    for (int i = 0; i < list._Count; i++)
+    //    {
+    //        Console.WriteLine(i + "삽입 전  원소 출력 2 {0}", list[i]);
+    //    }
+    //    list.Add(10);
+    //    list.Add(9);
+    //    list.Add(8);
+    //    list.Add(7);
+    //    list.Add(6);
+    //    list.Add(5);
+    //    list.Add(4);
+    //    //for (int i = 0; i < list._Count; i++)
+    //    //{
+    //    //    Console.WriteLine("원소 출력 {0}", list[i]);
+    //    //}
 
-        //    //Console.WriteLine("삭제 테스트");
-         
-        //    //Console.WriteLine("검색 테스트 {0}", list.Find(24));
-            
-        //    //list.RemoveAt(list.Find(24));
-        //    //list.RemoveAt(list.Find(11));
-        //    //list.RemoveAt(list.Find(13));
-        //    //for (int i = 0; i < list._Count; i++)
-        //    //{
-        //    //    Console.WriteLine("삭제 테스트 원소 출력 2 {0}", list[i]);
-        //    //}
-        //    list.Add(3);
-        //    list.Add(2);
-        //    list.Add(1);
-        //   // list.Add(0);
-
-        //    for (int i = 0; i < list._Count; i++)
-        //    {
-        //        Console.WriteLine(i + "정렬 전  원소 출력 2 {0}", list[i]);
-        //    }
-
-        //    list.InsertionSort();
-        //    Console.WriteLine("정렬 테스트"+list._Count);
-        //    for (int i = 0; i < list._Count; i++)
-        //    {
-        //        Console.WriteLine(i+"정렬 후 원소 출력 2 {0}", list[i]);
-        //    }
-
-        //    list.Clean();
+    //    //Console.WriteLine("저장 갯수 출력 {0}", list._Count);
+    //    ////list[0] = 1;
+    //    ////list[1] = 3;
+    //    ////list[2] = 5;
+    //    //for (int i = 0; i < list._Count; i++)
+    //    //{
+    //    //    Console.WriteLine("삽입 테스트 원소 출력 2 {0}", list[i]);
+    //    //}
 
 
-        //}
+    //    //Console.WriteLine("삭제 테스트");
+
+    //    //Console.WriteLine("검색 테스트 {0}", list.Find(24));
+
+    //    //list.RemoveAt(list.Find(24));
+    //    //list.RemoveAt(list.Find(11));
+    //    //list.RemoveAt(list.Find(13));
+    //    //for (int i = 0; i < list._Count; i++)
+    //    //{
+    //    //    Console.WriteLine("삭제 테스트 원소 출력 2 {0}", list[i]);
+    //    //}
+    //    list.Add(3);
+    //    list.Add(2);
+    //    list.Add(1);
+    //   // list.Add(0);
+
+    //    for (int i = 0; i < list._Count; i++)
+    //    {
+    //        Console.WriteLine(i + "정렬 전  원소 출력 2 {0}", list[i]);
+    //    }
+
+    //    list.InsertionSort();
+    //    Console.WriteLine("정렬 테스트"+list._Count);
+    //    for (int i = 0; i < list._Count; i++)
+    //    {
+    //        Console.WriteLine(i+"정렬 후 원소 출력 2 {0}", list[i]);
+    //    }
+
+    //    list.Clean();
 
 
-        //private void NeuralNetworkTest()
-        //{
-        //    Console.WriteLine("인공 신경망!");
-
-        //    AI.NuRONetwork.NeuralNetwork neuralNetwork = new AI.NuRONetwork.NeuralNetwork();
-
-        //    for (int i = 0; i < 9; i++)
-        //    {
-        //        float F;
-        //        F = neuralNetwork.feedForward(i);
-        //        Console.WriteLine("입력값  :: {0} , 출력값 :: {1}", i, F);
-        //    }
+    //}
 
 
-        //}
+    //private void NeuralNetworkTest()
+    //{
+    //    Console.WriteLine("인공 신경망!");
+
+    //    AI.NuRONetwork.NeuralNetwork neuralNetwork = new AI.NuRONetwork.NeuralNetwork();
+
+    //    for (int i = 0; i < 9; i++)
+    //    {
+    //        float F;
+    //        F = neuralNetwork.feedForward(i);
+    //        Console.WriteLine("입력값  :: {0} , 출력값 :: {1}", i, F);
+    //    }
+
+
+    //}
     //    private void SortTest()
     //    {
     //        int[] NonSortData = new int[10];
@@ -319,7 +314,7 @@ namespace ConsoleApp1
     //    }
     //}
 
-    
 
-    
+
+
 }
