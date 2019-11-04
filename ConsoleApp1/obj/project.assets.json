@@ -694,9 +694,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Project\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
-      "projectName": "ConsoleApp1",
-      "projectPath": "F:\\Project\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "F:\\Project\\ConsoleApp1\\ConsoleApp1\\JeongLibrary.csproj",
+      "projectName": "JeongLibrary",
+      "projectPath": "F:\\Project\\ConsoleApp1\\ConsoleApp1\\JeongLibrary.csproj",
       "packagesPath": "C:\\Users\\dl200\\.nuget\\packages\\",
       "outputPath": "F:\\Project\\ConsoleApp1\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",

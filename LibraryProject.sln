@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{48E68A0F-B405-4A23-90A2-E603417F3263}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeongLibrary", "ConsoleApp1\JeongLibrary.csproj", "{48E68A0F-B405-4A23-90A2-E603417F3263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessingTest", "ProcessingTest\ProcessingTest.csproj", "{413D5BBC-7A62-4EFB-8DDC-052F58BEC8D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessingTest", "ProcessingTest\ProcessingTest.csproj", "{413D5BBC-7A62-4EFB-8DDC-052F58BEC8D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
