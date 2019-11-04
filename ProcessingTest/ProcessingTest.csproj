@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="ConsoleApp1">
-      <HintPath>..\ConsoleApp1\bin\Debug\netcoreapp2.1\ConsoleApp1.dll</HintPath>
+    <Reference Include="JeongLibrary">
+      <HintPath>..\JeongLibrary\bin\Debug\netcoreapp2.1\JeongLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 

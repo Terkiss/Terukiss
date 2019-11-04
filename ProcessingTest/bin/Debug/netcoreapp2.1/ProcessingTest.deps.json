@@ -8,15 +8,15 @@
     ".NETCoreApp,Version=v2.1": {
       "ProcessingTest/1.0.0": {
         "dependencies": {
-          "ConsoleApp1": "1.0.0.0"
+          "JeongLibrary": "1.0.0.0"
         },
         "runtime": {
           "ProcessingTest.dll": {}
         }
       },
-      "ConsoleApp1/1.0.0.0": {
+      "JeongLibrary/1.0.0.0": {
         "runtime": {
-          "ConsoleApp1.dll": {
+          "JeongLibrary.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -30,7 +30,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ConsoleApp1/1.0.0.0": {
+    "JeongLibrary/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

@@ -92,39 +92,73 @@ namespace JeongLIbrary.Data_Structor
                         return;
                     }
                     else if (LeftChiled == null || RightChiled == null)
-                    {
+                    { 
+                        // 자식이 하나만 있을떄 
+                        
+
+
                         Console.WriteLine("2번쨰 케이스");
+
+                        
+                     
                         if (LeftChiled != null)
                         {
-                            Console.WriteLine("ㅇ   "+LeftChiled.Data);
+                         
+                            Console.WriteLine(" 왼쪽 자식 있음");
                             ParrentNode.Left = LeftChiled;
                         }
                         else if (RightChiled != null)
                         {
-                            ParrentNode.Right = RightChiled;
+                            ParrentNode.Right = RightChiled; 
+                            Console.WriteLine(" 오른 쪽 자식 있음");
                         }
                         return;
                     }
                     else
                     {
-                        if (LeftChiled != null)
-                        {
-                            Console.WriteLine("3번째 케이스");
-                            var Left = LeftChiled;
-                            while (Left != null)
-                            {
-                                ParrentNode = Left;
-                                Left = Left.Right;
-                            }
-                            if (ParrentNode.Left != null)
-                            {
-                                current.Data = ParrentNode.Data;
 
-                                ParrentNode.Data = ParrentNode.Left.Data;
-                                ParrentNode.Left = null;
+
+                        // 루트 일떄 처리가 안되어 있음
+                        Console.WriteLine("3번째 케이스");
+                        var Left = LeftChiled;
+                        var parrNode = Left;
+                        parrNode = null;
+                        while (Left != null)
+                        { // 가장 큰  값 
+                            // 이진 트리는 오른쪽 자식이 가장 큰 값을 가짐 
+                            parrNode = Left;
+                            Left = Left.Right;
+                        }
+                        if (parrNode != null)
+                        {
+
+                            // 오른쪽을 안건든 거처럼
+                            // 왼쪽 자식도 구지 건들 필요가 없음
+
+                            current.Data = parrNode.Data;
+
+
+                            if (parrNode.Left != null)
+                            { 
+                                parrNode.Data = parrNode.Left.Data;
+
+                                parrNode.Left = parrNode.Left.Left;
                             }
+                     
+
+
+
+
+
+                            Console.WriteLine("대 체값 임 :: {0}", parrNode.Data);
+                            //current.Data = parrNode.Data;
+
+                            //parrNode.Data = parrNode.Left.Data;
 
                         }
+
+                    
+                     
                         return; 
                     }
                 }
@@ -145,6 +179,121 @@ namespace JeongLIbrary.Data_Structor
 
 
         }
+
+        /// <summary>
+
+        /// 노드를 삭제합니다.
+
+        /// 3가지의 경우를 고려해서 삭제.
+
+        /// Case 1: 리프 노드인 경우
+
+        /// Case 2: 자식이 하나인 경우
+
+        /// Case 3: 자식이 둘인 경우
+
+        /// </summary>
+
+        /// <param name="node"> 삭제하고자 하는 노드 </param>
+
+        /// <returns> 삭제한 후의 그자리에 들어갈 노드 </returns>
+
+        public JeongBinaryTreeNode<T> DeleteNode(JeongBinaryTreeNode<T> node)
+
+        {
+
+            /// Case 1
+
+            if (node.Left == null && node.Right == null)
+
+            {
+                return null;
+            }
+
+            /// Case 2-1
+
+            else if (node.Left == null && node.Right != null)
+
+            {
+                return node.Right;
+            }
+
+            /// Case 2-2
+
+            else if (node.Left != null && node.Right == null)
+
+            {
+                return node.Left;
+            }
+
+            /// Case 3
+
+            else
+            {
+
+                JeongBinaryTreeNode<T> corruntNode = node.Right;
+
+                /// 가장 왼쪽 자식의 부모노드를 저장할 변수
+
+                JeongBinaryTreeNode<T> parentNode = null;
+
+
+
+                /// 삭제하고자 하는 노드의 오른쪽 자식의 가장 왼쪽 자식까지 찾아간다.
+
+                while (corruntNode.Left != null)
+
+                {
+
+                    parentNode = corruntNode;
+
+                    corruntNode = corruntNode.Left;
+
+                }
+
+
+
+                /// 삭제한 노드에 가장 왼쪽 자식을 집어 넣는다.
+
+                node.Data = corruntNode.Data;
+
+
+
+                /// 오른쪽 자식에 왼쪽 자식이 없다면
+
+                if (corruntNode == node.Right)
+
+                {
+
+                    /// 오른쪽 자식을 삭제한 노드에 집어 넣는다.
+
+                    node.Right = corruntNode.Right;
+
+                }
+
+                else
+
+                {
+
+                    /// 이동한 노드의 오른쪽 자식이 부모노드의 왼쪽 자식이 된다. (왼쪽 자식은 당연히 없다)
+
+                    parentNode.Left = corruntNode.Right;
+
+                }
+
+
+
+                return node;
+
+
+
+            }
+
+        }
+
+
+
+
         public void TreeClean()
         {
             Root = null;
@@ -355,7 +504,7 @@ namespace JeongLIbrary.Data_Structor
             {
                 if (ZeroComparerser(Data, Current.Data) == true)
                 {
-                    Console.WriteLine("동일한 데이터가 트리안에 있습니다. ");
+                    Console.WriteLine("동일 데이터 있음 . ");
                     return;
                 }
 

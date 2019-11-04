@@ -18,7 +18,7 @@ namespace ProcessingTest
 
             //_instance.StructureTest();
             _instance.TestFunc();
-            
+
 
         }
 
@@ -170,7 +170,8 @@ namespace ProcessingTest
 
                     for (int i = 0; i < 10; i++)
                     {
-                        var data = random.Next(0, 100);
+                        var data = random.Next(0, 1000);
+                        
                         jtree.AddNode(data);
                     }
 
@@ -191,7 +192,16 @@ namespace ProcessingTest
                 }
                 else if (Select.Equals("trm") == true)
                 {
-                    jtree.RemoveNode(4);
+         
+
+                    Console.WriteLine("이진 트리 삭제 선택\n 입력 할 값은 : ");
+                    string Value;
+                    Value = Console.ReadLine();
+                    jtree.RemoveNode(int.Parse(Value));
+
+                    Console.WriteLine("삭제 명령 입력 완료 ");
+                    Console.WriteLine("전위 순회 자동 실행");
+                    jtree.PreorderPrintTree();
                 }
             }
 

@@ -1,0 +1,15 @@
+F:\Project\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.1\JeongLibrary.deps.json
+F:\Project\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.1\JeongLibrary.dll
+F:\Project\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.1\JeongLibrary.pdb
+F:\Project\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.1\JeongLibrary.csprojAssemblyReference.cache
+F:\Project\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.1\JeongLibrary.AssemblyInfoInputs.cache
+F:\Project\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.1\JeongLibrary.AssemblyInfo.cs
+F:\Project\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.1\JeongLibrary.dll
+F:\Project\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.1\JeongLibrary.pdb
+F:\Project\ConsoleApp1\JeongLibrary\bin\Debug\netcoreapp2.1\JeongLibrary.deps.json
+F:\Project\ConsoleApp1\JeongLibrary\bin\Debug\netcoreapp2.1\JeongLibrary.dll
+F:\Project\ConsoleApp1\JeongLibrary\bin\Debug\netcoreapp2.1\JeongLibrary.pdb
+F:\Project\ConsoleApp1\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.AssemblyInfoInputs.cache
+F:\Project\ConsoleApp1\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.AssemblyInfo.cs
+F:\Project\ConsoleApp1\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.dll
+F:\Project\ConsoleApp1\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.pdb

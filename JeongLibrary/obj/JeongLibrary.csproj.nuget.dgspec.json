@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Project\\ConsoleApp1\\ConsoleApp1\\JeongLibrary.csproj": {}
+    "F:\\Project\\ConsoleApp1\\JeongLibrary\\JeongLibrary.csproj": {}
   },
   "projects": {
-    "F:\\Project\\ConsoleApp1\\ConsoleApp1\\JeongLibrary.csproj": {
+    "F:\\Project\\ConsoleApp1\\JeongLibrary\\JeongLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Project\\ConsoleApp1\\ConsoleApp1\\JeongLibrary.csproj",
+        "projectUniqueName": "F:\\Project\\ConsoleApp1\\JeongLibrary\\JeongLibrary.csproj",
         "projectName": "JeongLibrary",
-        "projectPath": "F:\\Project\\ConsoleApp1\\ConsoleApp1\\JeongLibrary.csproj",
+        "projectPath": "F:\\Project\\ConsoleApp1\\JeongLibrary\\JeongLibrary.csproj",
         "packagesPath": "C:\\Users\\dl200\\.nuget\\packages\\",
-        "outputPath": "F:\\Project\\ConsoleApp1\\ConsoleApp1\\obj\\",
+        "outputPath": "F:\\Project\\ConsoleApp1\\JeongLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
