@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace ConsoleApp1
+namespace JeongLIbrary
 { 
 public static class SSSSx
 {

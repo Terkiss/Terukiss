@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using ConsoleApp1;
+using JeongLIbrary;
 
 public class JeongSort
 {

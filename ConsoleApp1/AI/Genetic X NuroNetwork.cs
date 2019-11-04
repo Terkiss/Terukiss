@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp1.AI
+namespace JeongLIbrary.AI
 {
     class Genetic_X_NuroNetwork
     {

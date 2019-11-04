@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace JeongLIbrary.Data_Structor
+namespace JeongLibrary
 {
-
-    public class JeongRedBlackTree<T>
+    class SortCollection
     {
     }
 }

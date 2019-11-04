@@ -1,5 +1,5 @@
 ﻿using System;
-using ConsoleApp1.Data_Structor;
+using JeongLIbrary.Data_Structor;
 namespace ProcessingTest
 {
     class Program
