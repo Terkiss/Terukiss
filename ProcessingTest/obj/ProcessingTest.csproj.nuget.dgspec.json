@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Project\\ConsoleApp1\\ProcessingTest\\ProcessingTest.csproj": {}
+    "D:\\VS\\ConsoleApp1\\Terkiss\\Terukiss\\ProcessingTest\\ProcessingTest.csproj": {}
   },
   "projects": {
-    "F:\\Project\\ConsoleApp1\\ProcessingTest\\ProcessingTest.csproj": {
+    "D:\\VS\\ConsoleApp1\\Terkiss\\Terukiss\\ProcessingTest\\ProcessingTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Project\\ConsoleApp1\\ProcessingTest\\ProcessingTest.csproj",
+        "projectUniqueName": "D:\\VS\\ConsoleApp1\\Terkiss\\Terukiss\\ProcessingTest\\ProcessingTest.csproj",
         "projectName": "ProcessingTest",
-        "projectPath": "F:\\Project\\ConsoleApp1\\ProcessingTest\\ProcessingTest.csproj",
-        "packagesPath": "C:\\Users\\dl200\\.nuget\\packages\\",
-        "outputPath": "F:\\Project\\ConsoleApp1\\ProcessingTest\\obj\\",
+        "projectPath": "D:\\VS\\ConsoleApp1\\Terkiss\\Terukiss\\ProcessingTest\\ProcessingTest.csproj",
+        "packagesPath": "C:\\Users\\jeong\\.nuget\\packages\\",
+        "outputPath": "D:\\VS\\ConsoleApp1\\Terkiss\\Terukiss\\ProcessingTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dl200\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jeong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -43,23 +44,16 @@
         "netcoreapp2.1": {
           "dependencies": {
             "Microsoft.NETCore.App": {
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }

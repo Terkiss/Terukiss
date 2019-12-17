@@ -118,6 +118,7 @@ namespace JeongLIbrary.Data_Structor
                     {
 
 
+
                         // 루트 일떄 처리가 안되어 있음
                         Console.WriteLine("3번째 케이스");
                         var Left = LeftChiled;
