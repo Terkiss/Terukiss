@@ -11,6 +11,14 @@ namespace JeongLIbrary.Data_Structor
         private int length = 0;
         private int depth = 0;
 
+        public bool isEmptyRoot
+        {
+            get 
+            {
+                return (Root == null) ? true : false; 
+            }
+        }
+
 
 
 
@@ -74,18 +82,20 @@ namespace JeongLIbrary.Data_Structor
                 {
                     LeftChiled = current.Left;
                     RightChiled = current.Right;
-
+              
 
                     // 단말 노드일경우
                     if (LeftChiled == null && RightChiled == null)
                     {
+                        if (current == Root)
+                        { //  삭제 대상이 루트 일 경우
+                            Root = null;
+                            Console.WriteLine("루트 입니다 삭제 할게요");
+                            return;
+                        }
                         Console.WriteLine("1번쨰 케이스");
                         // 삭제 노드가 단말 노드일경우 부모노드의 왼쪽 또는 오른쪽 의 링크를 끈어줌
-                        if (ParrentNode == current)
-                        {
-                            Root = null;
-                        }
-                        else if (ParrentNode.Left == current)
+                        if (ParrentNode.Left == current)
                         {
                             ParrentNode.Left = null;
                         }
@@ -104,8 +114,20 @@ namespace JeongLIbrary.Data_Structor
 
 
                         Console.WriteLine("2번쨰 케이스");
-
-                        if (ParrentNode.Left == current)
+                        if (current == Root)
+                        { //  삭제 대상이 루트 일 경우
+                            if (Root.Left != null)
+                            {
+                                Root = Root.Left;
+                            }
+                            else if (Root.Right != null)
+                            {
+                                Root = Root.Right;
+                            }
+                            Console.WriteLine("루트 입니다 삭제 할게요");
+                            return;
+                        }
+                        else if (ParrentNode.Left == current)
                         {
 
                             if (current.Left != null)
@@ -130,26 +152,22 @@ namespace JeongLIbrary.Data_Structor
                             }
                         }
 
-
-
-
-                   
                         return;
                     }
                     else
-                    {
+                    {   //case 3
                         // 왼쪽의 최저점 구하기
                         // 오른쪽끝 확인
 
-
+                        
                         // 루트 일떄 처리가 안되어 있음
                         Console.WriteLine("3번째 케이스");
 
                         var Left = LeftChiled;
-                        var leftMaxCurrentParrent = Left;
+    
                         var leftMaxCurrent = Left;
                             leftMaxCurrent = null;
-                        leftMaxCurrentParrent = null;
+        
 
                         while (Left != null)
                         { // 가장 큰  값 
@@ -158,10 +176,7 @@ namespace JeongLIbrary.Data_Structor
                             {
                                 leftMaxCurrent = Left;
                             }
-                            else if (Left.Right.Right == null)
-                            {
-                                leftMaxCurrentParrent = Left;
-                            }
+                         
                             Left = Left.Right;
                         }
 
@@ -182,11 +197,28 @@ namespace JeongLIbrary.Data_Structor
                                 Console.WriteLine("사양 트리");
                                 // 사향 트리
                             }
+                            else
+                            {
                                
-                           
+                                  // 좌측 부분 트리에서 가장 큰 노드의 왼쪽 자식이 있다면
+                               var currentNode = current.Left;
+                               while (currentNode != null)
+                               {
+                               
+                                    if (ZeroComparerser(currentNode.Right.Data, leftMaxCurrent.Data) == true)
+                                    {
+                                        currentNode.Right = leftMaxCurrent.Left;
+                                        return;
 
+                                    }
+                                    else
+                                    {
+                                        currentNode = currentNode.Right;
+                                    }
+                               }
+                            }
+              
                         }
-
 
                         Console.Write("성공적 종료 우왕");
                         return; 
@@ -341,6 +373,15 @@ namespace JeongLIbrary.Data_Structor
             JeongBinaryTreeNode<T> current = Root;
             JeongStack<JeongBinaryTreeNode<T>> BtreeStaks = new JeongStack<JeongBinaryTreeNode<T>>();
             JeongLinkedList<T> printList = new JeongLinkedList<T>();
+
+            if (Root == null)
+            {
+                Console.Write("리턴 합니다 트리가 비었습니다");
+                return;
+            }
+
+
+
             BtreeStaks.PuSH(Root);
             //BtreeStaks.PuSH(Root);
             Console.WriteLine(BtreeStaks.IsEmpTy());
@@ -348,6 +389,10 @@ namespace JeongLIbrary.Data_Structor
             while (!BtreeStaks.IsEmpTy())
             {
                 var PopData = BtreeStaks.Pop;
+
+                
+                
+
                 printList.Add(PopData.Data); // 방문 처리
 
                 //스택은 FIFO 
