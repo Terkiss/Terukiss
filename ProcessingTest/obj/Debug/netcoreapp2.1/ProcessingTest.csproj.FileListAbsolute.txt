@@ -7,8 +7,6 @@ D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\Proces
 D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ProcessingTest.runtimeconfig.dev.json
 D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ProcessingTest.dll
 D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ProcessingTest.pdb
-D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ConsoleApp1.dll
-D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\ConsoleApp1.pdb
 D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.csproj.CopyComplete
 D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.dll
 D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.pdb
@@ -25,3 +23,5 @@ F:\Project\ConsoleApp1\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.csp
 F:\Project\ConsoleApp1\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.csproj.CopyComplete
 F:\Project\ConsoleApp1\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.dll
 F:\Project\ConsoleApp1\ProcessingTest\obj\Debug\netcoreapp2.1\ProcessingTest.pdb
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\JeongLibrary.dll
+D:\VS\ConsoleApp1\Terkiss\Terukiss\ProcessingTest\bin\Debug\netcoreapp2.1\JeongLibrary.pdb

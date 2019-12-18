@@ -13,3 +13,12 @@ F:\Project\ConsoleApp1\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.Assembl
 F:\Project\ConsoleApp1\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.AssemblyInfo.cs
 F:\Project\ConsoleApp1\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.dll
 F:\Project\ConsoleApp1\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.pdb
+D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\bin\Debug\netcoreapp2.1\JeongLibrary.deps.json
+D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\bin\Debug\netcoreapp2.1\JeongLibrary.dll
+D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\bin\Debug\netcoreapp2.1\JeongLibrary.pdb
+D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.csprojAssemblyReference.cache
+D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.csproj.CoreCompileInputs.cache
+D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.AssemblyInfoInputs.cache
+D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.AssemblyInfo.cs
+D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.dll
+D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.pdb

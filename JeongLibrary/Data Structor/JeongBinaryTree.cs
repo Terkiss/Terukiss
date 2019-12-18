@@ -64,7 +64,7 @@ namespace JeongLIbrary.Data_Structor
         public void RemoveNode(T Data)
         {
             JeongBinaryTreeNode<T> current = Root;
-            JeongBinaryTreeNode<T> ParrentNode = null;
+            JeongBinaryTreeNode<T> ParrentNode = Root;
             JeongBinaryTreeNode<T> LeftChiled = null;
             JeongBinaryTreeNode<T> RightChiled = null;
             T catchData;
@@ -80,7 +80,12 @@ namespace JeongLIbrary.Data_Structor
                     if (LeftChiled == null && RightChiled == null)
                     {
                         Console.WriteLine("1번쨰 케이스");
-                        if (ParrentNode.Left == current)
+                        // 삭제 노드가 단말 노드일경우 부모노드의 왼쪽 또는 오른쪽 의 링크를 끈어줌
+                        if (ParrentNode == current)
+                        {
+                            Root = null;
+                        }
+                        else if (ParrentNode.Left == current)
                         {
                             ParrentNode.Left = null;
                         }
@@ -93,73 +98,97 @@ namespace JeongLIbrary.Data_Structor
                     }
                     else if (LeftChiled == null || RightChiled == null)
                     { 
+                        //case2 자식이 하나가 있는 사이 노드일때
                         // 자식이 하나만 있을떄 
                         
 
 
                         Console.WriteLine("2번쨰 케이스");
 
-                        
-                     
-                        if (LeftChiled != null)
+                        if (ParrentNode.Left == current)
                         {
-                         
-                            Console.WriteLine(" 왼쪽 자식 있음");
-                            ParrentNode.Left = LeftChiled;
+
+                            if (current.Left != null)
+                            {
+                                ParrentNode.Left = current.Left;
+                            }
+                            else if (current.Right != null)
+                            {
+                                ParrentNode.Left = current.Right;
+                            }
+
                         }
-                        else if (RightChiled != null)
+                        else if (ParrentNode.Right == current)
                         {
-                            ParrentNode.Right = RightChiled; 
-                            Console.WriteLine(" 오른 쪽 자식 있음");
+                            if (current.Left != null)
+                            {
+                                ParrentNode.Right = current.Left;
+                            }
+                            else if (current.Right != null)
+                            {
+                                ParrentNode.Right = current.Right;
+                            }
                         }
+
+
+
+
+                   
                         return;
                     }
                     else
                     {
-
+                        // 왼쪽의 최저점 구하기
+                        // 오른쪽끝 확인
 
 
                         // 루트 일떄 처리가 안되어 있음
                         Console.WriteLine("3번째 케이스");
+
                         var Left = LeftChiled;
-                        var parrNode = Left;
-                        parrNode = null;
+                        var leftMaxCurrentParrent = Left;
+                        var leftMaxCurrent = Left;
+                            leftMaxCurrent = null;
+                        leftMaxCurrentParrent = null;
+
                         while (Left != null)
                         { // 가장 큰  값 
                             // 이진 트리는 오른쪽 자식이 가장 큰 값을 가짐 
-                            parrNode = Left;
+                            if (Left.Right == null)
+                            {
+                                leftMaxCurrent = Left;
+                            }
+                            else if (Left.Right.Right == null)
+                            {
+                                leftMaxCurrentParrent = Left;
+                            }
                             Left = Left.Right;
                         }
-                        if (parrNode != null)
+
+                        if (leftMaxCurrent != null)
                         {
+                            Console.Write(leftMaxCurrent.Data + " 널 통과 ");
+                            var parrNodeOfLeftChild = leftMaxCurrent.Left; 
+                       
+                            
+                            current.Data = leftMaxCurrent.Data;
 
-                            // 오른쪽을 안건든 거처럼
-                            // 왼쪽 자식도 구지 건들 필요가 없음
 
-                            current.Data = parrNode.Data;
+                            // leftMaxCurrent 좌측 최대값
 
-
-                            if (parrNode.Left != null)
-                            { 
-                                parrNode.Data = parrNode.Left.Data;
-
-                                parrNode.Left = parrNode.Left.Left;
+                            if (ZeroComparerser(current.Left.Data, leftMaxCurrent.Data) == true)
+                            {
+                                current.Left = current.Left.Left;
+                                Console.WriteLine("사양 트리");
+                                // 사향 트리
                             }
-                     
-
-
-
-
-
-                            Console.WriteLine("대 체값 임 :: {0}", parrNode.Data);
-                            //current.Data = parrNode.Data;
-
-                            //parrNode.Data = parrNode.Left.Data;
+                               
+                           
 
                         }
 
-                    
-                     
+
+                        Console.Write("성공적 종료 우왕");
                         return; 
                     }
                 }
