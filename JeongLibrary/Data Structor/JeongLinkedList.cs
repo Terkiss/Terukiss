@@ -1,10 +1,11 @@
-﻿using System;
+﻿using JeongLibrary.Data_Structor;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace JeongLIbrary.Data_Structor
 {
-    public class JeongLinkedList<T>
+    public class JeongLinkedList<T> : JeongStruct<T>
     {
 
 
@@ -187,18 +188,12 @@ namespace JeongLIbrary.Data_Structor
             }
             T pivot = Jlist[_Count / 2];
 
-
-
             int LeftStart = 0;  //first
             int RightStart = _Count - 1; // last
 
             int Low;
             int High;
 
-
-
-
-            //Console.WriteLine("ddddd + " + stk.EmpTy());
             stk.Push(RightStart);
             stk.Push(LeftStart);
 
@@ -260,9 +255,6 @@ namespace JeongLIbrary.Data_Structor
                 }
             }
             InsertionSort();
-
-
-
         }
 
 
@@ -289,15 +281,12 @@ namespace JeongLIbrary.Data_Structor
                     Jlist[j + 1] = Jlist[j]; // 레코드의 오른쪽으로 이동
                 }
 
-
                 Jlist[j + 1] = ProcessingData;
                 i++;
 
             }
-            // 3 2 5 1
 
         }
-
         public void InsertionSort2()
         {
             int i = 0;
@@ -343,8 +332,6 @@ namespace JeongLIbrary.Data_Structor
                 i++;
 
             }
-            // 3 2 5 1
-
         }
 
         public void InsertionSort(ref string[] Data)
@@ -366,32 +353,7 @@ namespace JeongLIbrary.Data_Structor
                 i++;
 
             }
-            // 3 2 5 1
-
         }
-
-
-
-        /// <summary>
-        /// 비교 함수
-        /// 왼쪽이 오른쪽 변수보다 크거나 같으면  TRUE를 반환
-        ///                         왼쪽 변수가 오른쪽 변수 보다 작으면 FALSE 를 반환
-        /// </summary>
-        /// <param name="value"> 좌 </param>
-        /// <param name="value2"> 우</param>
-        /// <returns></returns>
-        private bool Comparerser(T value, T value2)
-        {
-            var result = Comparer<T>.Default.Compare(value, value2);
-            if (result >= 0) { return true; }
-            else { return false; }
-        }
-
         #endregion // 정렬 함수 끗
-
-
     }
-
-
-
 }

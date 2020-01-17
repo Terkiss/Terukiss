@@ -168,7 +168,7 @@ namespace ProcessingTest
 
                     Random random = new Random();
 
-                    for (int i = 0; i < 10; i++)
+                    for (int i = 0; i < 100; i++)
                     {
                         var data = random.Next(0, 1000);
                         
