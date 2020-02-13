@@ -1,0 +1,13 @@
+F:\Project\Library\Library\bin\Debug\netcoreapp3.0\Library.exe
+F:\Project\Library\Library\bin\Debug\netcoreapp3.0\Library.deps.json
+F:\Project\Library\Library\bin\Debug\netcoreapp3.0\Library.runtimeconfig.json
+F:\Project\Library\Library\bin\Debug\netcoreapp3.0\Library.runtimeconfig.dev.json
+F:\Project\Library\Library\bin\Debug\netcoreapp3.0\Library.dll
+F:\Project\Library\Library\bin\Debug\netcoreapp3.0\Library.pdb
+F:\Project\Library\Library\bin\Debug\netcoreapp3.0\JeongLibrary.dll
+F:\Project\Library\Library\obj\Debug\netcoreapp3.0\Library.csprojAssemblyReference.cache
+F:\Project\Library\Library\obj\Debug\netcoreapp3.0\Library.AssemblyInfoInputs.cache
+F:\Project\Library\Library\obj\Debug\netcoreapp3.0\Library.AssemblyInfo.cs
+F:\Project\Library\Library\obj\Debug\netcoreapp3.0\Library.csproj.CopyComplete
+F:\Project\Library\Library\obj\Debug\netcoreapp3.0\Library.dll
+F:\Project\Library\Library\obj\Debug\netcoreapp3.0\Library.pdb

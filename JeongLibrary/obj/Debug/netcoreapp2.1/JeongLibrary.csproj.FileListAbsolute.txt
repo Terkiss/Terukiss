@@ -22,4 +22,3 @@ D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLib
 D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.AssemblyInfo.cs
 D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.dll
 D:\VS\ConsoleApp1\Terkiss\Terukiss\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.pdb
-F:\Project\ConsoleApp1\JeongLibrary\obj\Debug\netcoreapp2.1\JeongLibrary.csprojAssemblyReference.cache

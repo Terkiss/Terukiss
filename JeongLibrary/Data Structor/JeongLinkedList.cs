@@ -148,21 +148,35 @@ namespace JeongLIbrary.Data_Structor
             var prev = Head;
             int i = 0;
 
-            while (curr != null)
+            if (Index > _Count)
             {
-
-                if (i == Index)
-                {
-                    var temp = curr.Next;
-                    prev.Next = temp;
-                    count--;
-                    // Console.WriteLine("temp :::" + temp.Data + "   prev:::" + prev.Data);
-                    return;
-                }
-                prev = curr;
-                curr = curr.Next;
-                i++;
+                Console.Write("에러  인덱스 범위 초과 하엿습니다");
             }
+
+            if (Index == 0)
+            {
+                Head = Head.Next;
+                count--;
+            }
+            else
+            {
+                while (curr != null)
+                {
+
+                    if (i == Index)
+                    {
+                        var temp = curr.Next;
+                        prev.Next = temp;
+                        count--;
+                        // Console.WriteLine("temp :::" + temp.Data + "   prev:::" + prev.Data);
+                        return;
+                    }
+                    prev = curr;
+                    curr = curr.Next;
+                    i++;
+                }
+            }
+
         }
 
         public void Clean()
